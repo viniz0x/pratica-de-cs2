@@ -8,22 +8,50 @@ namespace pratica_de_cs2.Models
     public class Pessoa
     {
         private string _nome;
-        public string Nome { 
+        private string _sobrenome;
+        private int _idade;
 
-            get => _nome.ToUpper();
+        public string Nome { 
+            get => _nome;
 
             set {
                 if (value == "")
                 {
                     throw new ArgumentException("Nome não pode ser vazio.");
-
                 }
             _nome = value;
             }
         }
-        public int Idade { get; set; }
+
+        public string Sobrenome {
+            get => _sobrenome;
+
+            set {
+                if (value == "")
+                {
+                    throw new ArgumentException("Nome não pode ser vazio.");
+                }
+            _sobrenome = value;
+            }
+        }
+
+        public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+
+        public int Idade { 
+
+            get => _idade;
+            
+            set {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Idade não pode ser negativa.");
+                }
+                _idade = value;
+            } 
+        }
+        
         public void Apresentar() {
-            Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
+            Console.WriteLine($"Olá, meu nome é {NomeCompleto} e tenho {Idade} anos.");
         }
     }
 }
