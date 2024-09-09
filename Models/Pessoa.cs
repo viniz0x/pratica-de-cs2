@@ -10,9 +10,7 @@ namespace pratica_de_cs2.Models
         private string _nome;
         public string Nome { 
 
-            get {
-                return _nome.ToUpper();
-            }
+            get => _nome.ToUpper();
 
             set {
                 if (value == "")
