@@ -1,0 +1,14 @@
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\bin\Debug\net8.0\pratica-de-cs2.exe
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\bin\Debug\net8.0\pratica-de-cs2.deps.json
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\bin\Debug\net8.0\pratica-de-cs2.runtimeconfig.json
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\bin\Debug\net8.0\pratica-de-cs2.dll
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\bin\Debug\net8.0\pratica-de-cs2.pdb
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.AssemblyInfoInputs.cache
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.AssemblyInfo.cs
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.csproj.CoreCompileInputs.cache
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.dll
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\refint\pratica-de-cs2.dll
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.pdb
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.genruntimeconfig.cache
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\ref\pratica-de-cs2.dll
