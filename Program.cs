@@ -2,15 +2,10 @@
 
 Pessoa pessoa1 = new Pessoa();
 
-Pessoa p1 = new Pessoa();
-p1.Nome = "Leonardo";
-p1.Sobrenome = "Abrel";
-p1.Idade = 12;
+Pessoa p1 = new Pessoa(nome:"Leonardo", sobrenome:"Buta", idade:13);
+Pessoa p2 = new Pessoa(nome:"Ana", sobrenome:"Clara", idade:16);
+//Não á necessidade mas é uma boa prática -> (|nome:|"Leonardo"...)
 
-Pessoa p2 = new Pessoa();
-p2.Nome = "Abrael";
-p2.Sobrenome = "Berival";
-p2.Idade = 14;
 
 Curso cursoDeIngles = new Curso();
 cursoDeIngles.Nome = "Ingles";

@@ -7,6 +7,17 @@ namespace pratica_de_cs2.Models
 {
     public class Pessoa
     {
+        //Construtores
+        public Pessoa() {
+            
+        }
+
+        public Pessoa(string nome, string sobrenome, int idade) {
+            Nome = nome; //Propriedade recebe parametro
+            Sobrenome = sobrenome; //Propriedade recebe parametro
+            Idade = idade; //Propriedade recebe parametro
+        }
+
         private string _nome;
         private string _sobrenome;
         private int _idade;
