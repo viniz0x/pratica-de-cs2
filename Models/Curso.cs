@@ -23,5 +23,12 @@ namespace pratica_de_cs2.Models
         public bool RemoverAuleno(Pessoa aluno) {
             return Alunos.Remove(aluno);
         }
+
+        public void ListarAlunos(){
+            Console.WriteLine($"Alunos do curso de ingles:");
+            foreach(Pessoa aluno in Alunos) {
+                Console.WriteLine(aluno.NomeCompleto);
+            }
+        }    
     }
 }
