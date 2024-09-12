@@ -30,7 +30,7 @@ namespace pratica_de_cs2.Models
             for (int count = 0; count < Alunos.Count; count++) {
 
                 // string texto = "N° " + count + " - " + Alunos[count].NomeCompleto; 
-                string texto = $"N° {count} - {Alunos[count].NomeCompleto}"; //Interpolação
+                string texto = $"N° {count + 1} - {Alunos[count].NomeCompleto}"; //Interpolação
                 Console.WriteLine(texto);
             }
             // foreach(Pessoa aluno in Alunos) {
