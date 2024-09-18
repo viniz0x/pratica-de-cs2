@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Contracts;
+using System.Runtime.CompilerServices;
 using pratica_de_cs2.Models;
 
 
@@ -8,42 +9,69 @@ using pratica_de_cs2.Models;
 
 
 
+Stack<int> pilha = new Stack<int>();
 
-Queue<int> fila = new Queue<int>();
+pilha.Push(4);
+pilha.Push(6);
+pilha.Push(8);
+pilha.Push(10);
 
-fila.Enqueue(2);
-fila.Enqueue(4);
-fila.Enqueue(6);
-fila.Enqueue(8);
-
-foreach (int item in fila) {
+foreach (int item in pilha) {
     Console.WriteLine(item);
 }
 
-Console.WriteLine($"Removendo o elemento: {fila.Dequeue()}");
-Console.WriteLine($"\nInforme um valor de entrada");
+Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
 
+pilha.Push(20);
 
-// Sistema feito forá do curso para validar o valor inteiro ao entrar na lista sem encerrar o programa!
-bool EnterVefification = false;
-
-do {
-
-    try {
-        fila.Enqueue(Convert.ToInt32(Console.ReadLine()));
-        EnterVefification = true;
-
-    } catch (Exception ValorIncorreto) {
-        Console.WriteLine("Erro: [O valor informado deve ser um número inteiro]");
-        Console.WriteLine($"Mensagem da Exceção {ValorIncorreto.Message}");
-        }
-
-} while (!EnterVefification);
-
-Console.WriteLine($"\nAtuais conteúdos da lista: ");
-foreach (int item in fila) {
+foreach (int item in pilha) {
     Console.WriteLine(item);
 }
+
+
+
+
+
+
+
+
+
+
+// Queue<int> fila = new Queue<int>();
+
+// fila.Enqueue(2);
+// fila.Enqueue(4);
+// fila.Enqueue(6);
+// fila.Enqueue(8);
+
+// foreach (int item in fila) {
+//     Console.WriteLine(item);
+// }
+
+// Console.WriteLine($"Removendo o elemento: {fila.Dequeue()}");
+// Console.WriteLine($"\nInforme um valor de entrada");
+
+
+// // Sistema feito forá do curso para validar o valor inteiro ao entrar na lista sem encerrar o programa!
+// bool EnterVefification = false;
+
+// do {
+
+//     try {
+//         fila.Enqueue(Convert.ToInt32(Console.ReadLine()));
+//         EnterVefification = true;
+
+//     } catch (Exception ValorIncorreto) {
+//         Console.WriteLine("Erro: [O valor informado deve ser um número inteiro]");
+//         Console.WriteLine($"Mensagem da Exceção {ValorIncorreto.Message}");
+//         }
+
+// } while (!EnterVefification);
+
+// Console.WriteLine($"\nAtuais conteúdos da lista: ");
+// foreach (int item in fila) {
+//     Console.WriteLine(item);
+// }
 
 
 
