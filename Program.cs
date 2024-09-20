@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Contracts;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using pratica_de_cs2.Models;
 
@@ -8,25 +9,83 @@ using pratica_de_cs2.Models;
 
 
 
+Dictionary<string, string> estados = new Dictionary<string, string>();
 
-Stack<int> pilha = new Stack<int>();
+estados.Add("SP", "São Paulo");
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas Gerais");
 
-pilha.Push(4);
-pilha.Push(6);
-pilha.Push(8);
-pilha.Push(10);
-
-foreach (int item in pilha) {
-    Console.WriteLine(item);
+foreach (var PercorrerDictionary in estados) {
+    Console.WriteLine($"Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
 }
 
-Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
+Console.WriteLine("---------------------------");
 
-pilha.Push(20);
+estados.Remove("BA"); //Removação
+estados["SP"] = "Sao Paulo - Sem ascento"; //Alteração de valor
 
-foreach (int item in pilha) {
-    Console.WriteLine(item);
+foreach (var PercorrerDictionary in estados) {
+    Console.WriteLine($" Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
 }
+
+
+//Criando sistema forá do curso para armazenar nome de estados
+
+bool VerificandoString = false;
+string AdicionarEstado = string.Empty; //Para utilizar o valor da variável dentro e forá do try
+
+
+//Obs: Essa foi uma função feita apenas para testa try e cath, eles são considerados Power para uma situação como essa.
+do {
+    try {
+        Console.WriteLine("\nInforme a sigla do estado com apenas duas letras");
+        AdicionarEstado = Console.ReadLine().ToUpper();
+
+        if (AdicionarEstado.Length == 2 && char.IsLetter(AdicionarEstado[0]) &&char.IsLetter(AdicionarEstado[1])) {
+            VerificandoString = true;
+        } else {
+            throw new Exception("Você não seguiu o padrão solicitado");
+        }
+
+    } catch (Exception invalid) {
+        Console.WriteLine("Informações do erro: " + invalid.Message);
+    }
+} while (!VerificandoString);
+
+if (estados.ContainsKey(AdicionarEstado)) {
+    Console.WriteLine($"O estado {AdicionarEstado} já existe");
+} else {
+    estados.Add(AdicionarEstado, "");
+}
+
+Console.WriteLine("Informe o nome do estado;");
+estados[AdicionarEstado] = Console.ReadLine();
+
+Console.WriteLine("---------------------------");
+foreach (var PercorrerDictionary in estados) {
+    Console.WriteLine($" Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
+}
+Console.WriteLine("---------------------------");
+
+
+// Stack<int> pilha = new Stack<int>();
+
+// pilha.Push(4);
+// pilha.Push(6);
+// pilha.Push(8);
+// pilha.Push(10);
+
+// foreach (int item in pilha) {
+//     Console.WriteLine(item);
+// }
+
+// Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
+
+// pilha.Push(20);
+
+// foreach (int item in pilha) {
+//     Console.WriteLine(item);
+// }
 
 
 
