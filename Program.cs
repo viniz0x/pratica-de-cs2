@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System.Data.Common;
+using System.Diagnostics.Contracts;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using pratica_de_cs2.Models;
@@ -7,65 +8,116 @@ using pratica_de_cs2.Models;
 
 
 
+LeituraArquivo arquivo = new LeituraArquivo();
 
+var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Files/arquivoLeitura.txt");
 
-Dictionary<string, string> estados = new Dictionary<string, string>();
-
-estados.Add("SP", "São Paulo");
-estados.Add("BA", "Bahia");
-estados.Add("MG", "Minas Gerais");
-
-foreach (var PercorrerDictionary in estados) {
-    Console.WriteLine($"Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
-}
-
-Console.WriteLine("---------------------------");
-
-estados.Remove("BA"); //Removação
-estados["SP"] = "Sao Paulo - Sem ascento"; //Alteração de valor
-
-foreach (var PercorrerDictionary in estados) {
-    Console.WriteLine($" Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
-}
-
-
-//Criando sistema forá do curso para armazenar nome de estados
-
-bool VerificandoString = false;
-string AdicionarEstado = string.Empty; //Para utilizar o valor da variável dentro e forá do try
-
-
-//Obs: Essa foi uma função feita apenas para testa try e cath, eles são considerados Power para uma situação como essa.
-do {
-    try {
-        Console.WriteLine("\nInforme a sigla do estado com apenas duas letras");
-        AdicionarEstado = Console.ReadLine().ToUpper();
-
-        if (AdicionarEstado.Length == 2 && char.IsLetter(AdicionarEstado[0]) &&char.IsLetter(AdicionarEstado[1])) {
-            VerificandoString = true;
-        } else {
-            throw new Exception("Você não seguiu o padrão solicitado");
-        }
-
-    } catch (Exception invalid) {
-        Console.WriteLine("Informações do erro: " + invalid.Message);
+if (sucesso) {
+    Console.WriteLine("Quantidade linhas do arquivo: " + quantidadeLinhas);
+    
+    foreach (string linha in linhasArquivo) {
+        Console.WriteLine(linha);
     }
-} while (!VerificandoString);
-
-if (estados.ContainsKey(AdicionarEstado)) {
-    Console.WriteLine($"O estado {AdicionarEstado} já existe");
 } else {
-    estados.Add(AdicionarEstado, "");
+    Console.WriteLine("Erro ao ler o arquivo.");
 }
 
-Console.WriteLine("Informe o nome do estado;");
-estados[AdicionarEstado] = Console.ReadLine();
 
-Console.WriteLine("---------------------------");
-foreach (var PercorrerDictionary in estados) {
-    Console.WriteLine($" Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
-}
-Console.WriteLine("---------------------------");
+
+
+
+
+
+
+// //Obs: não á necessidade das informações após o tipo
+// (int Id, string Nome, string Sobrenome, decimal Altura) variavelTupla = (1, "Pedro Vinícius", "Nascimento", 1.83M);
+
+// // //desvantagem é não poder apontar do que se trata ou nomear os tipos como na sintaxe de cima
+// // ValueTuple<int, string, string, decimal> outraSintaxeTupla = (1, "Pedro Vinícius", "Nascimento", 1.83M);
+// // var outroOutroSintaxeTupla = Tuple.Create(1, "Pedro Vinícius", "Nascimento", 1.83M);
+
+
+
+// Console.WriteLine($"Id: {variavelTupla.Item1}");
+// Console.WriteLine($"Nome: {variavelTupla.Item2}");
+// Console.WriteLine($"Sobrenome: {variavelTupla.Item3}");
+// Console.WriteLine($"Altura: {variavelTupla.Item4}");
+
+
+
+
+
+
+
+
+
+// Dictionary<string, string> estados = new Dictionary<string, string>();
+
+// estados.Add("SP", "São Paulo");
+// estados.Add("BA", "Bahia");
+// estados.Add("MG", "Minas Gerais");
+
+// foreach (var PercorrerDictionary in estados) {
+//     Console.WriteLine($"Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
+// }
+
+// Console.WriteLine("---------------------------");
+
+// estados.Remove("BA"); //Removação
+// estados["SP"] = "Sao Paulo - Sem ascento"; //Alteração de valor
+
+// foreach (var PercorrerDictionary in estados) {
+//     Console.WriteLine($" Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
+// }
+
+
+// //Criando sistema forá do curso para armazenar nome de estados
+
+// bool VerificandoString = false;
+// string AdicionarEstado = string.Empty; //Para utilizar o valor da variável dentro e forá do try
+
+
+// //Obs: Essa foi uma função feita apenas para testa try e cath, eles são considerados Power para uma situação como essa.
+// do {
+//     try {
+//         Console.WriteLine("\nInforme a sigla do estado com apenas duas letras");
+//         AdicionarEstado = Console.ReadLine().ToUpper();
+
+//         if (AdicionarEstado.Length == 2 && char.IsLetter(AdicionarEstado[0]) &&char.IsLetter(AdicionarEstado[1])) {
+//             VerificandoString = true;
+//         } else {
+//             throw new Exception("Você não seguiu o padrão solicitado");
+//         }
+
+//     } catch (Exception invalid) {
+//         Console.WriteLine("Informações do erro: " + invalid.Message);
+//     }
+// } while (!VerificandoString);
+
+// if (estados.ContainsKey(AdicionarEstado)) {
+//     Console.WriteLine($"O estado {AdicionarEstado} já existe");
+// } else {
+//     estados.Add(AdicionarEstado, "");
+// }
+
+// Console.WriteLine("Informe o nome do estado;");
+// estados[AdicionarEstado] = Console.ReadLine();
+
+// Console.WriteLine("---------------------------");
+// foreach (var PercorrerDictionary in estados) {
+//     Console.WriteLine($" Chave: {PercorrerDictionary.Key}, Valor: {PercorrerDictionary.Value}");
+// }
+// Console.WriteLine("---------------------------");
+
+
+
+
+
+
+
+
+
+
 
 
 // Stack<int> pilha = new Stack<int>();
