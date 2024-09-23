@@ -7,12 +7,12 @@ namespace pratica_de_cs2.Models
 {
     public class Venda
     {
-        public Venda(int id, string produto, decimal preco, DateTime dataVenda){
-            Id = id;
-            Produto = produto;
-            Preco = preco;
-            DataVenda = dataVenda;
-        }
+        // public Venda(int id, string produto, decimal preco, DateTime dataVenda){ //Constructor para Serialização
+        //     Id = id;
+        //     Produto = produto;
+        //     Preco = preco;
+        //     DataVenda = dataVenda;
+        // }
         public int Id { get; set; }
         public string Produto { get; set; }
         public decimal Preco { get; set; }
