@@ -6,12 +6,12 @@ using pratica_de_cs2.Models;
 using Newtonsoft.Json; //Usando o pacote
 
 
-
+DateTime dataAtual = DateTime.Now;
 
 List<Venda> listaVendas = new List<Venda>();
 
-Venda venda1 = new Venda(1, "Material de escritório", 25.00M);
-Venda venda2 = new Venda(2, "Licença de Software", 110.00M);
+Venda venda1 = new Venda(1, "Material de escritório", 25.00M, dataAtual);
+Venda venda2 = new Venda(2, "Licença de Software", 110.00M, dataAtual);
 
 listaVendas.Add(venda1);
 listaVendas.Add(venda2);
@@ -21,6 +21,7 @@ string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indente
 File.WriteAllText("Files/vendas.json", serializado);
 
 Console.WriteLine(serializado);
+//https://codebeautify.org/jsonviewer - Site para validar o formato do .json
 
 
 
