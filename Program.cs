@@ -6,21 +6,58 @@ using pratica_de_cs2.Models;
 
 
 
+int numero = 20;
+bool ehPar = false;
 
+//IF Ternário
+ehPar = numero % 2 == 0;
+Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
 
-LeituraArquivo arquivo = new LeituraArquivo();
-
-var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Files/arquivoLeitura.txt");
-
-if (sucesso) {
-    Console.WriteLine("Quantidade linhas do arquivo: " + quantidadeLinhas);
-    
-    foreach (string linha in linhasArquivo) {
-        Console.WriteLine(linha);
-    }
+//IF Normal 
+if(numero % 2 == 0) {
+    Console.WriteLine($"O número {numero} é par");
 } else {
-    Console.WriteLine("Erro ao ler o arquivo.");
+    Console.WriteLine($"O número {numero} é ímpar");
 }
+
+
+
+
+
+
+
+
+
+
+// //Descontrutor
+// Pessoa p1 = new Pessoa("Pedro", "Vinícius", 20);
+// (string nome, string sobrenome, int idade) = p1;
+
+// Console.WriteLine($"Nome: {nome}, Sobrenome: {sobrenome}, Idade: {idade}");
+
+
+
+
+
+
+
+
+
+
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Files/arquivoLeitura.txt");
+
+// if (sucesso) {
+//     // Console.WriteLine("Quantidade linhas do arquivo: " + quantidadeLinhas);
+
+//     foreach (string linha in linhasArquivo) {
+//         Console.WriteLine(linha);
+//     }
+// } else {
+//     Console.WriteLine("Erro ao ler o arquivo.");
+// }
 
 
 

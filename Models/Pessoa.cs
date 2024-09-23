@@ -18,6 +18,12 @@ namespace pratica_de_cs2.Models
             Idade = idade; //Propriedade recebe parametro
         }
 
+        public void Deconstruct(out string nome, out string sobrenome, out int idade) {
+            nome = Nome;
+            sobrenome = Sobrenome;
+            idade = Idade;
+        }
+
         private string _nome;
         private string _sobrenome;
         private int _idade;
@@ -63,6 +69,11 @@ namespace pratica_de_cs2.Models
         
         public void Apresentar() {
             Console.WriteLine($"Olá, meu nome é {NomeCompleto} e tenho {Idade} anos.");
+        }
+
+        internal void Deconstruct(out string nome, out string sobrenome)
+        {
+            throw new NotImplementedException();
         }
     }
 }
