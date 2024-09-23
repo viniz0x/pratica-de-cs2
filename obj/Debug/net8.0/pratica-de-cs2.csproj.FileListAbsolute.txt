@@ -13,3 +13,6 @@ C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-dev
 C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.genruntimeconfig.cache
 C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\ref\pratica-de-cs2.dll
 C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.sourcelink.json
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-de-cs2.csproj.AssemblyReference.cache
+C:\Users\luap3\OneDrive\Desktop\Workspace\dio_SiteDeCursos\xp-inc-full-stack-developer\pratica-de-cs2\obj\Debug\net8.0\pratica-.4C89587E.Up2Date

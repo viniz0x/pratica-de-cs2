@@ -3,22 +3,50 @@ using System.Diagnostics.Contracts;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using pratica_de_cs2.Models;
+using Newtonsoft.Json; //Usando o pacote
 
 
 
-int numero = 20;
-bool ehPar = false;
 
-//IF Ternário
-ehPar = numero % 2 == 0;
-Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
+List<Venda> listaVendas = new List<Venda>();
 
-//IF Normal 
-if(numero % 2 == 0) {
-    Console.WriteLine($"O número {numero} é par");
-} else {
-    Console.WriteLine($"O número {numero} é ímpar");
-}
+Venda venda1 = new Venda(1, "Material de escritório", 25.00M);
+Venda venda2 = new Venda(2, "Licença de Software", 110.00M);
+
+listaVendas.Add(venda1);
+listaVendas.Add(venda2);
+
+string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented); //Ex. de serialização de acordo as orientações de uso do pacote
+
+File.WriteAllText("Files/vendas.json", serializado);
+
+Console.WriteLine(serializado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int numero = 20;
+// bool ehPar = false;
+
+// //IF Ternário
+// ehPar = numero % 2 == 0;
+// Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
+
+// //IF Normal 
+// if(numero % 2 == 0) {
+//     Console.WriteLine($"O número {numero} é par");
+// } else {
+//     Console.WriteLine($"O número {numero} é ímpar");
+// }
 
 
 
